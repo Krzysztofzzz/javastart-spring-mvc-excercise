@@ -19,21 +19,28 @@
         <div class="media col-6 offset-3" th:each="item: ${items}">
             <i class="fas fa-utensils fa-4x"></i>
             <div class="media-body">
-                <h5 th:text="|${item.name}(${item.price}zł)|">Pizza Margherita (25zł)</h5>
-                <p th:text="${item.shortDescription}">Krótki opis pizzy margherita, pysznej klasyki na cienkim cieście i rozpływającym się serem.</p>
+                <a href="#" th:href="@{|/danie/${#strings.replace(item.name, ' ', '-')}|}">
+                    <h5 th:text="|${item.name}(${item.price}zł)|">Pizza Margherita (25zł)</h5>
+                </a>
+                <p th:text="${item.shortDescription}">Krótki opis pizzy margherita, pysznej klasyki na cienkim cieście i
+                    rozpływającym się serem.</p>
             </div>
         </div>
         <div class="media col-6 offset-3">
             <i class="fas fa-utensils fa-4x"></i>
             <div class="media-body">
-                <h5>Pizza Capriciosa (26zł)</h5>
+                <a href="#">
+                    <h5>Pizza Capriciosa (26zł)</h5>
+                </a>
                 <p>Krótki opis pizzy margherita, pysznej klasyki na cienkim cieście i rozpływającym się serem.</p>
             </div>
         </div>
         <div class="media col-6 offset-3">
             <i class="fas fa-utensils fa-4x"></i>
             <div class="media-body">
-                <h5>Pizza Mafioso (27zł)</h5>
+                <a href="#">
+                    <h5>Pizza Mafioso (27zł)</h5>
+                </a>
                 <p>Krótki opis pizzy margherita, pysznej klasyki na cienkim cieście i rozpływającym się serem.</p>
             </div>
         </div>
