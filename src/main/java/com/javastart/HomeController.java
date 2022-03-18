@@ -1,4 +1,4 @@
-package com.javastart.controllers;
+package com.javastart;
 
 import com.javastart.item.Item;
 import com.javastart.item.ItemReposiotory;
