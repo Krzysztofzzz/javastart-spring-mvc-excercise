@@ -1,4 +1,4 @@
-package com.javastart.iterm;
+package com.javastart.item;
 
 
 import javax.persistence.*;

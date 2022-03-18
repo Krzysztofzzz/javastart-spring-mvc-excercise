@@ -1,4 +1,4 @@
-package com.javastart.iterm;
+package com.javastart.item;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

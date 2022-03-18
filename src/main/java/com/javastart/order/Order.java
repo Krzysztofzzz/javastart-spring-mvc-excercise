@@ -1,6 +1,6 @@
 package com.javastart.order;
 
-import com.javastart.iterm.Item;
+import com.javastart.item.Item;
 
 import javax.persistence.*;
 import java.util.ArrayList;
