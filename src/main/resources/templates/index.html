@@ -13,17 +13,20 @@
         <div class="container text-center text-white jumbo-container">
             <h1 class="display-3">Foodie</h1>
             <p>Witaj w naszej restauracji. Zamawiaj co chcesz i ile chcesz, a my przygotujemy to dla Ciebie.</p>
+            <a th:href="@{/zamowienie}">Zamówienie</a>
         </div>
     </div>
     <div th:remove="all-but-first">
-        <div class="media col-6 offset-3" th:each="item: ${items}">
+        <div class="media col-6 offset-3 my-3" th:each="item: ${items}">
             <i class="fas fa-utensils fa-4x"></i>
             <div class="media-body">
-                <a href="#" th:href="@{|/danie/${#strings.replace(item.name, ' ', '-')}|}">
+                <a href="#" th:href="@{|/danie/${#strings.replace(item.name, ' ', '-').toLowerCase()}|}">
                     <h5 th:text="|${item.name}(${item.price}zł)|">Pizza Margherita (25zł)</h5>
                 </a>
-                <p th:text="${item.shortDescription}">Krótki opis pizzy margherita, pysznej klasyki na cienkim cieście i
-                    rozpływającym się serem.</p>
+                <p th:text="${item.shortDescription}">Krótki opis pizzy margherita, pysznej klasyki na cienkim cieście i rozpływającym się serem.</p>
+                <a href="#" th:href="@{/zamowienie/dodaj(itemId=${item.id})}" class="btn btn-sm btn-primary">
+                    Dodaj do zamówienia
+                </a>
             </div>
         </div>
         <div class="media col-6 offset-3">
